@@ -18,7 +18,7 @@ import { iphoneRouter } from "./routes/iphone.router.js";
 dotenv.config();
 const app = Express();
 const port = process.env.PORT || 8000;
-const token = "6110445314:AAFTw44eejkd1IqaME1uvVEGT2LWU1CSENE";
+const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 export var stopped;
 export var dailyUpdates;
