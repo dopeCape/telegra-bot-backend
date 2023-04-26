@@ -29,6 +29,10 @@ export function telegram_service(bot) {
       if (msg.text == "/start") {
         try {
           let user = await userExistes(userid, username);
+          bot.sendMessage(
+            chatId,
+            `/help to list all commands\n/list to list all avaliable iphones\n/sus <iphone> to suscribe to a iphone eg. /sus 14\n/unsus <iphone> to unsuscribe to a iphone eg. /unsus 14.\n/price to list prices of suscribed iphones\n/suslist to list iphones suscribed`
+          );
         } catch (error) {
           console.log(error);
         }
